@@ -7,6 +7,13 @@ class DishTest < Minitest::Test
   def test_this_is_a_dish
     dish = Dish.new("Couscous Salad", :appetizer)
 
-    assert_instance_of Dish, dish 
+    assert_instance_of Dish, dish
+  end
+
+  def test_it_has_attributes
+    dish = Dish.new("Couscous Salad", :appetizer)
+
+    assert_equal "Couscous Salad", dish.name
+    assert_equal :appetizer, dish.category
   end
 end
